@@ -1,0 +1,62 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add use-debounce
+
+PATH: 
+  /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  19.9.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/wuyaping/Library/Caches/Yarn/v6/npm-glob-parent-6.0.2-6d237d99083950c79290f24c7642a3de9a28f9e3-integrity/node_modules/glob-parent/README.md' -> '/Users/wuyaping/project/nextjs/nextjs-dashboard/node_modules/tailwindcss/node_modules/glob-parent/README.md'
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "build": "next build",
+      "dev": "next dev --turbo",
+      "start": "next start"
+    },
+    "dependencies": {
+      "@heroicons/react": "^2.1.4",
+      "@tailwindcss/forms": "^0.5.7",
+      "@vercel/postgres": "^0.8.0",
+      "autoprefixer": "10.4.19",
+      "bcrypt": "^5.1.1",
+      "clsx": "^2.1.1",
+      "next": "^15.0.0",
+      "next-auth": "5.0.0-beta.19",
+      "postcss": "8.4.38",
+      "react": "19.0.0-rc-cd22717c-20241013",
+      "react-dom": "19.0.0-rc-cd22717c-20241013",
+      "tailwindcss": "3.4.4",
+      "typescript": "5.5.2",
+      "use-debounce": "^10.0.1",
+      "zod": "^3.23.8"
+    },
+    "devDependencies": {
+      "@types/bcrypt": "^5.0.2",
+      "@types/node": "20.14.8",
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    },
+    "pnpm": {
+      "overrides": {
+        "@types/react": "npm:types-react@19.0.0-rc.1",
+        "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
