@@ -2,11 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import {
-  Link,
   animateScroll as scroll,
-  Events,
   Element,
-  scroller,
 } from "react-scroll";
 
 // import "/app/ui/fullPageComponent.css";
@@ -19,6 +16,7 @@ const FullScreenScroll = () => {
 
   const handleScroll = (e) => {
     const deltaY = e.deltaY > 0 ? 1 : -1; // 判断滚动方向
+    // const deltaY = e.target.scrollTop < 0 ? -1 : 1;
     setScrollDirection(deltaY);
   };
 
@@ -74,26 +72,29 @@ const FullScreenScroll = () => {
 
         scroll.scrollMore(getScrollPx(1), {
           duration: 300,
-          smooth: true,
-          delay: 0,
-          spyThrottle: 300,
+          smooth: "easeInOutQuad",
+          // spyThrottle: 300,
         });
       } else if (scrollDirection === -1) {
         // 向上滚动
 
         scroll.scrollMore(getScrollPx(-1), {
           duration: 300,
-          smooth: true,
+          smooth: "easeInOutQuad",
           delay: 0,
-          spyThrottle: 300,
+          // spyThrottle: 300,
         });
       }
     };
-
-    window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("wheel", handleWheel, {
+      passive: false,
+      capture: true,
+    });
+    // window.addEventListener("scroll", handleWheel, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
+      // window.removeEventListener("scroll", handleWheel);
     };
   }, [scrollDirection]);
 
