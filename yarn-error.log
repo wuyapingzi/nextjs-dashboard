@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add use-debounce
+  /usr/local/bin/node /usr/local/bin/yarn add fullpage.js
 
 PATH: 
   /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -8,13 +8,13 @@ Yarn version:
   1.22.19
 
 Node version: 
-  19.9.0
+  21.7.3
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, copyfile '/Users/wuyaping/Library/Caches/Yarn/v6/npm-glob-parent-6.0.2-6d237d99083950c79290f24c7642a3de9a28f9e3-integrity/node_modules/glob-parent/README.md' -> '/Users/wuyaping/project/nextjs/nextjs-dashboard/node_modules/tailwindcss/node_modules/glob-parent/README.md'
+  Error: ENOENT: no such file or directory, copyfile '/Users/wuyaping/Library/Caches/Yarn/v6/npm-glob-parent-6.0.2-6d237d99083950c79290f24c7642a3de9a28f9e3-integrity/node_modules/glob-parent/LICENSE' -> '/Users/wuyaping/project/nextjs/nextjs-dashboard/node_modules/eslint/node_modules/glob-parent/LICENSE'
 
 npm manifest: 
   {
@@ -22,7 +22,8 @@ npm manifest:
     "scripts": {
       "build": "next build",
       "dev": "next dev --turbo",
-      "start": "next start"
+      "start": "next start",
+      "lint": "next lint"
     },
     "dependencies": {
       "@heroicons/react": "^2.1.4",
@@ -45,7 +46,9 @@ npm manifest:
       "@types/bcrypt": "^5.0.2",
       "@types/node": "20.14.8",
       "@types/react": "npm:types-react@19.0.0-rc.1",
-      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+      "eslint": "^8",
+      "eslint-config-next": "15.0.2"
     },
     "pnpm": {
       "overrides": {
